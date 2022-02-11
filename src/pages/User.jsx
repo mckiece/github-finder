@@ -45,20 +45,20 @@ function User() {
 
 	return (
 		<>
-			<div className="w-full mx-auto lg:w-10/12">
+			<div className="mx-auto w-full lg:w-10/12">
 				<div className="mb-4">
 					<Link to="/" className="btn btn-ghost">
 						Back to Search
 					</Link>
 				</div>
 
-				<div className="grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 mb-8 md:gap-8">
+				<div className="mb-8 grid grid-cols-1 md:grid-cols-3 md:gap-8 lg:grid-cols-3 xl:grid-cols-3">
 					<div className="custom-card-image mb-6 md:mb-0">
-						<div className="rounded-lg shadow-xl card image-full">
+						<div className="image-full card rounded-lg shadow-xl">
 							<figure>
 								<img src={avatar_url} alt="" />
 							</figure>
-							<div className="card-body justify-end">
+							<div className="card-body justify-end p-4">
 								<h2 className="card-title mb-0">{name}</h2>
 								<p>{login}</p>
 							</div>
@@ -66,46 +66,46 @@ function User() {
 					</div>
 					<div className="col-span-2">
 						<div className="mb-6">
-							<h1 className="text-3xl card-title">
+							<h1 className="card-title text-3xl">
 								{name}
-								<div className="ml-2 mr-1 badge badge-success">
+								<div className="badge badge-success ml-2 mr-1">
 									{type}
 								</div>
 								{hireable && (
-									<div className="mx-1 badge badge-info">
+									<div className="badge badge-info mx-1">
 										Hireable
 									</div>
 								)}
 							</h1>
 							<p>{bio}</p>
-							<div className="mt-4 card-actions">
+							<div className="card-actions mt-4">
 								<a
 									href={html_url}
 									target="_blank"
 									rel="noreferrer"
-									className="btn btn-outline"
+									className="btn-outline btn"
 								>
 									Visit Github Profile
 								</a>
 							</div>
 						</div>
-						<div className="w-full rounded-lg shadow-md bg-base-100 stats">
+						<div className="stats w-full rounded-lg bg-base-100 shadow-md shadow-gray-800">
 							{location && (
 								<div className="stat">
-									<div className="stat-title text-md">
+									<div className="text-md stat-title">
 										Location
 									</div>
-									<div className="text-lg stat-value">
+									<div className="stat-value text-lg">
 										{location}
 									</div>
 								</div>
 							)}
 							{blog && (
 								<div className="stat">
-									<div className="stat-title text-md">
+									<div className="text-md stat-title">
 										Website
 									</div>
-									<div className="text-lg stat-value">
+									<div className="stat-value text-lg">
 										<a
 											href={`https://${blog}`}
 											target="_blank"
@@ -118,10 +118,10 @@ function User() {
 							)}
 							{twitter_username && (
 								<div className="stat">
-									<div className="stat-title text-md">
+									<div className="text-md stat-title">
 										Twitter
 									</div>
-									<div className="text-lg stat-value">
+									<div className="stat-value text-lg">
 										<a
 											href={`https://twitter.com/${twitter_username}`}
 											target="_blank"
@@ -135,7 +135,7 @@ function User() {
 						</div>
 					</div>
 				</div>
-				<div className="w-full py-5 mb-6 rounded-lg shadow-md bg-base-100 stats">
+				<div className="stats mb-6 w-full rounded-lg bg-base-100 py-5 shadow-md shadow-gray-800">
 					<div className="stat">
 						<div className="stat-figure text-secondary">
 							<FaUsers className="text-3xl md:text-5xl" />

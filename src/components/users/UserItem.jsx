@@ -3,12 +3,11 @@ import PropTypes from "prop-types";
 
 function UserItem({ user: { login, avatar_url } }) {
 	return (
-		<div className="side card compact bg-base-100 shadow-md shadow-gray-800">
-			{/* <div className="side card-bordered card compact bg-base-100"> */}
-			<div className="flexrow card-body items-center space-x-4">
+		<div className="shadow-md side card compact bg-base-100 shadow-gray-800">
+			<div className="items-center space-x-4 flexrow card-body">
 				<div>
 					<div className="avatar">
-						<div className="h-20 w-20 rounded-full shadow">
+						<div className="w-20 h-20 rounded-full shadow">
 							<img src={avatar_url} alt="Profile" />
 						</div>
 					</div>
